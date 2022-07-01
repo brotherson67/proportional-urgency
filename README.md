@@ -22,6 +22,20 @@ The user will describe their task
 The user will express their level of stress over the task
 The user will set themselves a working speed
 
+**How to Install**
+Instructions Coming Soon!
+
+**How to Use**
+Instructions Coming Soon!
+
 **Future Improvements**
 A user will be able to select on a graphical interface where a task lands on the scale
 there will be individualized accounts to allow the user to work with others
+
+Tech Stack
+
+- NodeJS
+- MySQL2
+- Sequelize
+- HTML/CSS
+- ExpressJS
