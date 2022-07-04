@@ -8,6 +8,12 @@ class Tasks extends Sequelize.Model {}
 Tasks.init(
   // Pass Tasks table data
   {
+    id: {
+      type: Sequelize.DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     title: {
       type: Sequelize.DataTypes.STRING,
       // Don't force the user to add a value so a default name will be created
@@ -42,6 +48,14 @@ Tasks.init(
       type: Sequelize.DataTypes.INTEGER,
       allowNull: false,
     },
+    // foreign key connecting Tasks to User
+    user_id: {
+      type: Sequelize.DataTypes.INTEGER,
+      references: {
+        model: "User",
+        key: "id",
+      },
+    },
   },
   // pass model options
   {
@@ -49,6 +63,8 @@ Tasks.init(
     sequelize,
     // freeze the table/model name so its not changed by default
     freezeTableName: true,
+    // change all camel case columns to underscored by default
+    underscored: true,
 
     // DO I WANT TO SYNC THE TABLES AUTOMATICALLY?
   }
