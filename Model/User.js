@@ -29,8 +29,8 @@ User.init(
   {
     // connection to the DB
     sequelize,
-    // Define the name of this model so it's not defaulted to plural
-    modelName: "User",
+    // freeze the name of this model so it's not defaulted to plural
+    freezeTableName: true,
   }
 );
 

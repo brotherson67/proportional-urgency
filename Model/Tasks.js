@@ -24,24 +24,20 @@ Tasks.init(
       type: Sequelize.DataTypes.TEXT,
       allowNull: false,
     },
-    date_created: {
-      // adds the current timestamp when entity is created
-      type: Sequelize.DataTypes.NOW,
-    },
+
     date_due: {
       // allow the user to decide when they need this done
       type: Sequelize.DataTypes.DATE,
-      allowNull: false,
     },
     difficulty: {
       // user will enter anticipated difficulty to help anticipate length of time required
       // the interface will have a select designation that corresponds to a number
-      type: Sequelize.DataTypes.SMALLINT,
+      type: Sequelize.DataTypes.INTEGER,
     },
     urgency: {
       // user will choose how urgent the task is
       type: Sequelize.DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
     },
     importance: {
       // user will rate how important the task is
